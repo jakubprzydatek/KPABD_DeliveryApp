@@ -1,0 +1,16 @@
+<html xmlns:form="http://www.w3.org/1999/xhtml">
+<head>
+</head>
+<body>
+<h3>Welcome, Insert The Order</h3>
+<form>
+    <h2 class="form-signin-heading">Please enter delivery status</h2>
+    <input id="dstatus" type="text" required name="delivery_status" placeholder="pending">
+    <input id="oid" type="number" required name="id" placeholder="10">
+    <label ></label>
+</form>
+<div id="orders"></div>
+<button onclick="addOrder()">Add order</button>
+<script src="api.js"></script>
+</body>
+</html>

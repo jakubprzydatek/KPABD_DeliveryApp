@@ -1,16 +1,51 @@
 <html xmlns:form="http://www.w3.org/1999/xhtml">
 <head>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Delivery App</title>
 </head>
-<body>
-<h3>Welcome, Insert The Order</h3>
-<form>
-    <h2 class="form-signin-heading">Please enter delivery status</h2>
-    <input id="dstatus" type="text" required name="delivery_status" placeholder="pending">
-    <input id="oid" type="number" required name="id" placeholder="10">
-    <label ></label>
-</form>
-<div id="orders"></div>
-<button onclick="addOrder()">Add order</button>
-<script src="api.js"></script>
+<body onload="getOrders()">
+<div class="mainbox">
+    <div class="logo"><h1>Delivery App</h1></div>
+    <div class="menu">
+        <div class="menu-item">
+           <a href="/"> Add/Modify Order </a>
+        </div>
+        <div class="menu-item">
+            <a href="/repending"> Pending report </a>
+        </div>
+        <div class="menu-item">
+            <a href="/reontheway">On the way report</a>
+        </div>
+        <div class="menu-item">
+            <a href="/redelivered">Delivered report</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="report" id="orders">
+
+        </div>
+        <button class="generate_btn" onclick="getOrders()">Refresh report</button>
+    </div>
+
+    <h3>Modify The Order</h3>
+    <form>
+        <h2 class="form-signin-heading">Please enter delivery status</h2>
+        <label for="dstatus">Choose a status:</label>
+        <select name="delivery_status" id="dstatus">
+            <option value="pending">Pending</option>
+            <option value="on the way">On the way</option>
+            <option value="delivered">Delivered</option>
+        </select>
+        <input id="oid" type="number" required name="id" placeholder="Order ID">
+        <button onclick="modifyOrder()">Modify order</button><br>
+
+    </form>
+
+    <div class="adBtnDiv"><button onclick="createNewOrder()">Add new order</button></div>
+
+    <script src="api.js"></script>
+
+    <footer></footer>
+</div>
 </body>
 </html>

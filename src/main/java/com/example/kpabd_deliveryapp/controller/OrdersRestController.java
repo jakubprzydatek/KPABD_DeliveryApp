@@ -32,7 +32,7 @@ public class OrdersRestController {
         return ordersService.getPendingOrders();
     }
 
-    @GetMapping("/api/orders/onetheway")
+    @GetMapping("/api/orders/ontheway")
     public List<Orders> getOnTheWayOrders()
     {
         return ordersService.getOnTheWayOrders();

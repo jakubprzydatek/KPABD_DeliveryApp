@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.mainbox{
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    text-align:center;
+}
+
+.logo{
+    display: inline;
+    height:10%;
+    background-color: black;
+    color: beige;
+}
+
+footer{
+    display: inline;
+    height:50px;
+    background-color: black;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    background-color: beige;
+}
+
+.menu-item{
+    display: flex;
+    margin-left: 10%;
+    width: 25%;
+    text-align:center;
+}
+
+.content{
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: khaki;
+}
+
+.report{
+
+}
+
+.order{
+    padding: 10px;
+    border-collapse: inherit;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+}
+
+button{
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 2px;
+    background-color: burlywood;
+    width: fit-content;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    color: gray;
+}

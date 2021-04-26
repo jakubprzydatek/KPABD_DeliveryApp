@@ -1,0 +1,35 @@
+<html xmlns:form="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Delivery App</title>
+</head>
+<body onload="getReport('/api/orders/ontheway')">
+<div class="mainbox">
+    <div class="logo"><h1>Delivery App</h1></div>
+    <div class="menu">
+        <div class="menu-item">
+            <a href="/"> Add/Modify Order </a>
+        </div>
+        <div class="menu-item">
+            <a href="/repending"> Pending report </a>
+        </div>
+        <div class="menu-item">
+            <a href="/reontheway">On the way report</a>
+        </div>
+        <div class="menu-item">
+            <a href="/redelivered">Delivered report</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="report" id="orders">
+
+        </div>
+        <button class="generate_btn" onclick="getReport('/api/orders/ontheway')">Refresh report</button>
+    </div>
+
+    <script type="text/javascript" src="/js/src/reports.js"></script>
+
+    <footer></footer>
+</div>
+</body>
+</html>
